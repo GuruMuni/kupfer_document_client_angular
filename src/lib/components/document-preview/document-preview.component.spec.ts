@@ -12,6 +12,7 @@ import { of } from 'rxjs';
 import { updateDocument } from '@clients/documents/src/lib/state/documents.actions';
 import { MidgardTranslationTestModule } from '@src/midgard/testing-utilities/translation-testing.module';
 import { MatSnackBar } from '@angular/material';
+import { StoreStub } from '../../../../../../midgard/testing-utilities/stubs';
 
 describe('DocumentPreviewComponent', () => {
   let component: DocumentPreviewComponent;
@@ -24,6 +25,7 @@ describe('DocumentPreviewComponent', () => {
       schemas: [NO_ERRORS_SCHEMA],
       providers: [
         FileExtensionHelper,
+        { provide: Store, useClass: StoreStub },
         { provide: ImageLoadingService, useClass: StubService },
         { provide: MatSnackBar, useClass: MatSnackBarStub },
       ],

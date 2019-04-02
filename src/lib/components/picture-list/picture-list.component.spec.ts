@@ -9,6 +9,7 @@ import { FileExtensionHelper } from '@clients/documents/src/lib/helpers/file-ext
 import { MidgardStoreModule } from '@src/midgard/modules/store/store.module';
 import { MidgardTranslationTestModule } from '@src/midgard/testing-utilities/translation-testing.module';
 import { Store } from '@src/midgard/modules/store/store';
+import { StoreStub } from '../../../../../../midgard/testing-utilities/stubs';
 
 describe('PictureListComponent', () => {
   let component: PictureListComponent;
@@ -19,10 +20,11 @@ describe('PictureListComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ PictureListComponent ],
-      imports: [MidgardTranslationTestModule, MidgardStoreModule.forRoot()],
+      imports: [MidgardTranslationTestModule],
       schemas: [NO_ERRORS_SCHEMA],
       providers: [
         FileExtensionHelper,
+        { provide: Store, useClass: StoreStub },
         { provide: HttpService, useClass: StubService },
         { provide: MatSnackBar, useClass: MatSnackBarStub },
         { provide: MatDialog, useClass: MatDialogStub},
