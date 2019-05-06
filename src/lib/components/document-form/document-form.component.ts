@@ -9,7 +9,7 @@ import {
 } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 
-import { Subject } from 'rxjs/Subject';
+import { Subject } from 'rxjs';
 import * as moment from 'moment';
 
 import { Document } from '../../state/models/document.model';

@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import { map } from 'rxjs/operators/map';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { loadWorkflowLevel2 } from '@src/midgard/state/workflow-level2/workflow-level2.actions';
 import { loadCoreuserData } from '@src/midgard/state/coreuser/coreuser.actions';
 import { select, Store } from '@src/midgard/modules/store/store';

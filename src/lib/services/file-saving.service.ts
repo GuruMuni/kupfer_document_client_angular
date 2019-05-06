@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Observable} from 'rxjs/Observable';
-import { Subject } from 'rxjs/Subject';
+import { Observable} from 'rxjs';
+import { Subject } from 'rxjs';
 import { FileExtensionHelper } from '@clients/documents/src/lib/helpers/file-extension.helper';
 import { ImageLoadingService } from '@clients/documents/src/lib/services/image-loading.service';
 import { select, Store } from '@src/midgard/modules/store/store';

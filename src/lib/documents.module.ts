@@ -14,7 +14,6 @@ import { CommonModule } from '@angular/common';
 import { FileExtensionHelper } from '@clients/documents/src/lib/helpers/file-extension.helper';
 import { FileSavingService } from '@clients/documents/src/lib/services/file-saving.service';
 import { ImageLoadingService } from '@clients/documents/src/lib/services/image-loading.service';
-import { MidgardSharedTranslationModule } from '@src/midgard/modules/translation/translation.shared.module';
 import { DeleteConfirmationModule } from '@clients/documents/src/lib/components/delete-confirmation/delete-confirmation.module';
 import { DeleteConfirmationComponent } from '@clients/documents/src/lib/components/delete-confirmation/delete-confirmation.component';
 import {
@@ -28,12 +27,13 @@ import {
 } from 'freyja-ui';
 import {MidgardCrudModule} from '@src/midgard/modules/crud/crud.module';
 import {ReactiveFormsModule} from '@angular/forms';
+import { DocumentsTranslationModule } from './i18n/documents-translation.module';
 
 @NgModule({
   imports: [
     CommonModule,
     DocumentsRoutingModule,
-    MidgardSharedTranslationModule,
+    DocumentsTranslationModule,
     MatSnackBarModule,
     MatDialogModule,
     FjSpinnerModule,

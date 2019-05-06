@@ -8,9 +8,9 @@ import {
 } from '@angular/core';
 import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
 
-import { Subject } from 'rxjs/Subject';
+import { Subject } from 'rxjs';
 import { FileExtensionHelper } from '../../helpers/file-extension.helper';
-import { Subscription } from 'rxjs/Subscription';
+import { Subscription } from 'rxjs';
 import { select, Store } from '@src/midgard/modules/store/store';
 import { ImageLoadingService } from '@clients/documents/src/lib/services/image-loading.service';
 import { selectDocument } from '@clients/documents/src/lib/state/documents.selectors';

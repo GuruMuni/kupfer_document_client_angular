@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators/map';
 import { saveBlobUrl } from '@clients/documents/src/lib/state/documents.actions';
 import { Store } from '@src/midgard/modules/store/store';

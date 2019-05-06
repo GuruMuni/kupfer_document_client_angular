@@ -4,7 +4,7 @@ import { TranslateModule } from '@ngx-translate/core';
 
 import { DocumentListComponent } from './document-list.component';
 // import {TableMockComponent} from '../../../../../testing/mock.data';
-import {Subscription} from 'rxjs/Subscription';
+import {Subscription} from 'rxjs';
 import { MidgardStoreModule } from '@src/midgard/modules/store/store.module';
 import { FileSavingService } from '@clients/documents/src/lib/services/file-saving.service';
 import { FileSavingStubService } from '@src/midgard/testing-utilities/stubs';
